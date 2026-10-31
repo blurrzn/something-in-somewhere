@@ -750,3 +750,208 @@ body {
     font-size: 22px;
   }
 }
+
+/* OUR SOUNDTRACK */
+
+.music-player {
+  width: min(100% - 32px, 520px);
+  margin: 35px auto 60px;
+  padding: 35px 28px;
+  background: #fbf6ef;
+  border: 1px solid #e8dcd1;
+  border-radius: 180px 180px 18px 18px;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(100, 75, 65, 0.08);
+}
+
+.vinyl-area {
+  display: flex;
+  justify-content: center;
+  margin: 5px auto 28px;
+}
+
+.vinyl {
+  width: 190px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    repeating-radial-gradient(
+      circle,
+      #292522 0px,
+      #292522 2px,
+      #39332f 3px,
+      #292522 4px,
+      #292522 7px
+    );
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.vinyl-center {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #d9aeb0;
+  color: #fffaf4;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  border: 5px solid #f4e5d9;
+}
+
+.vinyl.playing {
+  animation: spinVinyl 4s linear infinite;
+}
+
+@keyframes spinVinyl {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.music-label,
+.playlist-heading {
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: #a8877f;
+}
+
+.music-player h2 {
+  margin: 10px 0 4px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #594943;
+}
+
+.music-artist {
+  margin: 0;
+  font-size: 13px;
+  color: #9b8580;
+}
+
+.music-progress {
+  margin: 28px 0 18px;
+}
+
+#music-progress {
+  width: 100%;
+  accent-color: #b98589;
+  cursor: pointer;
+}
+
+.music-time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #9b8580;
+  margin-top: 5px;
+}
+
+.music-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin: 22px 0 35px;
+}
+
+.music-controls button {
+  border: none;
+  background: transparent;
+  color: #806b64;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.music-controls .play-button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #c99599;
+  color: white;
+  font-size: 20px;
+  box-shadow: 0 5px 12px rgba(160, 110, 115, 0.2);
+}
+
+.playlist {
+  text-align: left;
+  border-top: 1px solid #eaded4;
+  padding-top: 20px;
+}
+
+.playlist-heading {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.playlist-song {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 13px 10px;
+  border: none;
+  border-bottom: 1px solid #eee4dc;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  color: #594943;
+  transition: background 0.2s ease;
+}
+
+.playlist-song:hover,
+.playlist-song.active {
+  background: #f3e9e2;
+  border-radius: 8px;
+}
+
+.playlist-number {
+  font-family: 'Cormorant Garamond', serif;
+  color: #b58b88;
+  font-size: 17px;
+}
+
+.playlist-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.playlist-info strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.playlist-info small {
+  color: #9b8580;
+  font-size: 11px;
+}
+
+.playlist-symbol {
+  color: #b98589;
+}
+
+.music-footer {
+  margin: 25px 0 0;
+  font-family: 'Parisienne', cursive;
+  font-size: 19px;
+  color: #a8877f;
+}
+
+@media (max-width: 520px) {
+  .music-player {
+    padding: 30px 20px;
+    border-radius: 130px 130px 16px 16px;
+  }
+
+  .vinyl {
+    width: 160px;
+  }
+
+  .music-player h2 {
+    font-size: 28px;
+  }
+}

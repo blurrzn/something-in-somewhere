@@ -307,21 +307,77 @@
       </div>
     </section>
 
-    <!-- SOUNDTRACK -->
-    <section class="page subpage" id="soundtrack">
-      <button class="back-button">← Back</button>
-      <div class="page-heading">
-        <span class="page-emoji">🎶</span>
-        <p class="small-label">SOUNDTRACK OF US</p>
-        <h1>Our Soundtrack</h1>
-        <p>Some songs just feel a little more special because of you.</p>
+   <!-- SOUNDTRACK -->
+<section class="page subpage" id="soundtrack">
+  <button class="back-button">← Back</button>
+
+  <div class="page-heading">
+    <span class="page-emoji">🎶</span>
+    <p class="small-label">SOUNDTRACK OF US</p>
+    <h1>Our Soundtrack</h1>
+    <p>Some songs just feel a little more special because of you.</p>
+  </div>
+
+  <div class="music-player">
+    <div class="vinyl-area">
+      <div class="vinyl" id="vinyl">
+        <div class="vinyl-center">♡</div>
       </div>
-      <div class="placeholder-area">
-        <span>♫</span>
-        <p>Our songs will play here.</p>
-        <small>A playlist made for us.</small>
+    </div>
+
+    <p class="music-label">NOW PLAYING</p>
+    <h2 id="music-title">Coming Up Roses</h2>
+    <p class="music-artist" id="music-artist">Harry Styles</p>
+
+    <audio id="soundtrack-audio" preload="metadata"></audio>
+
+    <div class="music-progress">
+      <input
+        type="range"
+        id="music-progress"
+        min="0"
+        max="100"
+        value="0"
+        step="0.1"
+        aria-label="Music progress"
+      >
+      <div class="music-time">
+        <span id="music-current">0:00</span>
+        <span id="music-duration">0:00</span>
       </div>
-    </section>
+    </div>
+
+    <div class="music-controls">
+      <button id="music-prev" aria-label="Previous song">|◀</button>
+      <button id="music-play" class="play-button" aria-label="Play">▶</button>
+      <button id="music-next" aria-label="Next song">▶|</button>
+    </div>
+
+    <div class="playlist">
+      <p class="playlist-heading">A LITTLE PLAYLIST FOR US ♡</p>
+
+      <button class="playlist-song active" data-track="0">
+        <span class="playlist-number">01</span>
+        <span class="playlist-info">
+          <strong>Coming Up Roses</strong>
+          <small>Harry Styles</small>
+        </span>
+        <span class="playlist-symbol">♫</span>
+      </button>
+
+      <button class="playlist-song" data-track="1">
+        <span class="playlist-number">02</span>
+        <span class="playlist-info">
+          <strong>Turning Page</strong>
+          <small>Sleeping At Last</small>
+        </span>
+        <span class="playlist-symbol">♫</span>
+      </button>
+    </div>
+
+    <p class="music-footer">Every song reminds me of a little piece of us. ♡</p>
+  </div>
+</section>
     
     <!-- PROMISE -->
     <section class="page subpage" id="promise">

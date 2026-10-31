@@ -201,3 +201,138 @@ letterBack.addEventListener("click", () => {
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+// OUR SOUNDTRACK PLAYER
+
+const soundtrack = [
+  {
+    title: "Coming Up Roses",
+    artist: "Harry Styles",
+    file: "music/Coming%20Up%20Roses.mp3"
+  },
+  {
+    title: "Turning Page",
+    artist: "Sleeping At Last",
+    file: "music/Turning%20Page.mp3"
+  }
+];
+
+const audio = document.getElementById("soundtrack-audio");
+const vinyl = document.getElementById("vinyl");
+const playButton = document.getElementById("music-play");
+const prevButton = document.getElementById("music-prev");
+const nextButton = document.getElementById("music-next");
+const progress = document.getElementById("music-progress");
+const currentTimeText = document.getElementById("music-current");
+const durationText = document.getElementById("music-duration");
+const musicTitle = document.getElementById("music-title");
+const musicArtist = document.getElementById("music-artist");
+const playlistButtons = document.querySelectorAll(".playlist-song");
+
+let currentTrack = 0;
+
+function formatMusicTime(seconds) {
+  if (!Number.isFinite(seconds)) return "0:00";
+
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = Math.floor(seconds % 60);
+
+  return `${minutes}:${String(remainingSeconds).padStart(2, "0")}`;
+}
+
+function loadTrack(index, shouldPlay = false) {
+  currentTrack = index;
+  const track = soundtrack[currentTrack];
+
+  audio.pause();
+  audio.src = track.file;
+  audio.load();
+
+  musicTitle.textContent = track.title;
+  musicArtist.textContent = track.artist;
+
+  progress.value = 0;
+  currentTimeText.textContent = "0:00";
+  durationText.textContent = "0:00";
+
+  playlistButtons.forEach((button, i) => {
+    button.classList.toggle("active", i === currentTrack);
+  });
+
+  playButton.textContent = "▶";
+  playButton.setAttribute("aria-label", "Play");
+  vinyl.classList.remove("playing");
+
+  if (shouldPlay) {
+    playMusic();
+  }
+}
+
+function playMusic() {
+  audio.play().then(() => {
+    playButton.textContent = "Ⅱ";
+    playButton.setAttribute("aria-label", "Pause");
+    vinyl.classList.add("playing");
+  }).catch(() => {
+    playButton.textContent = "▶";
+    vinyl.classList.remove("playing");
+  });
+}
+
+function pauseMusic() {
+  audio.pause();
+  playButton.textContent = "▶";
+  playButton.setAttribute("aria-label", "Play");
+  vinyl.classList.remove("playing");
+}
+
+playButton.addEventListener("click", () => {
+  if (audio.paused) {
+    playMusic();
+  } else {
+    pauseMusic();
+  }
+});
+
+prevButton.addEventListener("click", () => {
+  const previous = (currentTrack - 1 + soundtrack.length) % soundtrack.length;
+  loadTrack(previous, true);
+});
+
+nextButton.addEventListener("click", () => {
+  const next = (currentTrack + 1) % soundtrack.length;
+  loadTrack(next, true);
+});
+
+playlistButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const selectedTrack = Number(button.dataset.track);
+    loadTrack(selectedTrack, true);
+  });
+});
+
+audio.addEventListener("loadedmetadata", () => {
+  durationText.textContent = formatMusicTime(audio.duration);
+});
+
+audio.addEventListener("timeupdate", () => {
+  if (!Number.isFinite(audio.duration) || audio.duration === 0) return;
+
+  progress.value = (audio.currentTime / audio.duration) * 100;
+  currentTimeText.textContent = formatMusicTime(audio.currentTime);
+});
+
+progress.addEventListener("input", () => {
+  if (!Number.isFinite(audio.duration) || audio.duration === 0) return;
+
+  audio.currentTime = (Number(progress.value) / 100) * audio.duration;
+});
+
+audio.addEventListener("ended", () => {
+  pauseMusic();
+  progress.value = 100;
+  currentTimeText.textContent = formatMusicTime(audio.duration);
+});
+
+// Load the opening song without autoplay
+loadTrack(0);
