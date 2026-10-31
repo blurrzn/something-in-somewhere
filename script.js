@@ -1,4 +1,3 @@
-
 const envelope = document.getElementById("envelope");
 const entrancePage = document.getElementById("entrance-page");
 const website = document.getElementById("website");
@@ -122,7 +121,7 @@ const letters = {
   insecure: {
     title: "When You Doubt Yourself",
     body: [
-      "Hey, beautiful.",
+      "Halo, cantikku.",
       "I wish you could see yourself through my eyes, even just for a moment.",
       "You are so much more than your achievements, your appearance, or the things you think you should have done better.",
       "You don't have to be perfect to be wonderful. You already are, simply by being you.",
@@ -144,7 +143,7 @@ const letters = {
   angry: {
     title: "When You're Upset With Me",
     body: [
-      "Hi, sayang.",
+      "Sayangku.",
       "If you're reading this because I upset you, I'm sorry. I never want you to feel like your feelings don't matter.",
       "I know we won't always agree on everything, and we won't always get things right. But I hope we can keep choosing to understand each other.",
       "Take the time you need. When you're ready, I want to listen, understand, and make things better together.",
@@ -155,7 +154,7 @@ const letters = {
   love: {
     title: "When You Need to Feel Loved ♡",
     body: [
-      "My dearest sayang,",
+      "My love,",
       "In case nobody has reminded you today: you are loved. So, so loved.",
       "I love your little habits, your laugh, your stories, your random thoughts, and all the tiny things that make you who you are.",
       "You don't need a special reason to deserve love. You don't need to do anything extra to earn mine.",
@@ -204,16 +203,26 @@ letterBack.addEventListener("click", () => {
 
 // OUR SOUNDTRACK PLAYER
 
-const soundtrack = [
+  const soundtrack = [
   {
     title: "Coming Up Roses",
     artist: "Harry Styles",
-    file: "music/Coming%20Up%20Roses.mp3"
+    src: "music/Coming%20Up%20Roses.mp3"
   },
   {
     title: "Turning Page",
     artist: "Sleeping At Last",
-    file: "music/Turning%20Page.mp3"
+    src: "music/Turning%20Page.mp3"
+  },
+  {
+    title: "Love is in the Air, Pt. 1",
+    artist: "Rock Burwell",
+    src: "music/Love%20is%20in%20the%20Air,%20Pt. 1.mp3"
+  },
+  {
+    title: "Everywhere, Everything",
+    artist: "Noah Kahan",
+    src: "music/Nama%20File%20Lagu%20Keempat.mp3"
   }
 ];
 
