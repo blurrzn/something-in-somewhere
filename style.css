@@ -973,7 +973,12 @@ body {
 }
 
 .heart-letter p {
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.heart-letter p:last-child {
+  margin-bottom: 0;
 }
 
 .letter-decoration {
