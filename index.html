@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letters From Us ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ENTRANCE -->
+  <section id="entrance-page" class="entrance-page">
+    <div class="floating-flower flower-one">✿</div>
+    <div class="floating-flower flower-two">❀</div>
+    <div class="floating-flower flower-three">✿</div>
+
+    <p class="small-label">A LITTLE SOMETHING MADE WITH LOVE</p>
+    <h1 class="entrance-title">Letters From Us</h1>
+    <p class="entrance-description">For my favorite person, sayang ♡</p>
+
+    <div class="envelope-wrapper" id="envelope">
+      <div class="envelope">
+        <div class="envelope-back"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-front"></div>
+        <div class="envelope-heart">♡</div>
+      </div>
+    </div>
+
+    <p class="click-hint" id="click-hint">Tap the envelope to open</p>
+  </section>
+
+  <!-- WEBSITE PAGES -->
+  <main id="website" class="hidden">
+
+    <!-- HOME -->
+    <section class="page active" id="home">
+      <header class="home-header">
+        <p class="small-label">A COLLECTION OF LITTLE THINGS</p>
+        <h1>For You, <span>Sayang.</span></h1>
+        <p class="home-intro">
+          A little corner of the internet, made just for you.
+          Take your time and explore every little thing. ♡
+        </p>
+      </header>
+
+      <div class="home-divider">✿ &nbsp; ✿ &nbsp; ✿</div>
+
+      <section class="explore-section">
+        <p class="small-label">A LITTLE WORLD OF OURS</p>
+        <h2>Where would you like to go?</h2>
+        <p class="explore-description">
+          There are little things waiting for you.
+        </p>
+
+        <div class="feature-grid">
+          <button class="feature-card" data-page="open-when">
+            <span class="feature-icon">💌</span>
+            <h3>Open When...</h3>
+            <p>Letters for different kinds of days.</p>
+            <span class="card-arrow">Explore →</span>
+          </button>
+
+          <button class="feature-card" data-page="adore">
+            <span class="feature-icon">🌷</span>
+            <h3>Things I Adore</h3>
+            <p>A little collection of lovely things.</p>
+            <span class="card-arrow">Explore →</span>
+          </button>
+
+          <button class="feature-card" data-page="soundtrack">
+            <span class="feature-icon">🎶</span>
+            <h3>Our Soundtrack</h3>
+            <p>A little place for music and memories.</p>
+            <span class="card-arrow">Explore →</span>
+          </button>
+
+          <button class="feature-card" data-page="garden">
+            <span class="feature-icon">🪻</span>
+            <h3>Our Little Garden</h3>
+            <p>A tiny garden just for the two of us.</p>
+            <span class="card-arrow">Explore →</span>
+          </button>
+
+          <button class="feature-card" data-page="surprises">
+            <span class="feature-icon">✨</span>
+            <h3>Little Surprises</h3>
+            <p>Some unexpected little things.</p>
+            <span class="card-arrow">Explore →</span>
+          </button>
+
+          <button class="feature-card" data-page="promise">
+            <span class="feature-icon">♡</span>
+            <h3>A Little Promise</h3>
+            <p>Something I want you to keep.</p>
+            <span class="card-arrow">Explore →</span>
+          </button>
+        </div>
+      </section>
+
+      <footer class="home-footer">
+        Made with love, just for you ♡
+      </footer>
+    </section>
+
+    
+<!-- OPEN WHEN -->
+<section class="page subpage" id="open-when">
+  <button class="back-button">← Back</button>
+
+  <div class="page-heading">
+    <span class="page-emoji">💌</span>
+    <p class="small-label">A LITTLE COLLECTION OF LETTERS</p>
+    <h1>Open When...</h1>
+    <p>
+      For the days when I can't be right beside you,
+      I hope these little letters can keep you company.
+    </p>
+  </div>
+
+  <!-- LETTER COLLECTION -->
+  <div class="letters-grid">
+
+    <button class="letter-card" data-letter="miss">
+      <span class="envelope-icon">💌</span>
+      <h3>Open when you miss me</h3>
+      <p>For when you wish I was right there with you.</p>
+      <span class="card-arrow">Open letter →</span>
+    </button>
+
+    <button class="letter-card" data-letter="sad">
+      <span class="envelope-icon">🌷</span>
+      <h3>Open when you're sad</h3>
+      <p>For the days when things feel a little heavy.</p>
+      <span class="card-arrow">Open letter →</span>
+    </button>
+
+    <button class="letter-card" data-letter="bad-day">
+      <span class="envelope-icon">☁️</span>
+      <h3>Open after a bad day</h3>
+      <p>A little reminder that tomorrow is another day.</p>
+      <span class="card-arrow">Open letter →</span>
+    </button>
+
+    <button class="letter-card" data-letter="sleep">
+      <span class="envelope-icon">🌙</span>
+      <h3>Open when you can't sleep</h3>
+      <p>Something soft to read before you close your eyes.</p>
+      <span class="card-arrow">Open letter →</span>
+    </button>
+
+    <button class="letter-card" data-letter="insecure">
+      <span class="envelope-icon">🪞</span>
+      <h3>Open when you doubt yourself</h3>
+      <p>For when you forget just how wonderful you are.</p>
+      <span class="card-arrow">Open letter →</span>
+    </button>
+
+    <button class="letter-card" data-letter="happy">
+      <span class="envelope-icon">☀️</span>
+      <h3>Open when you're happy</h3>
+      <p>Because your happiness deserves to be celebrated.</p>
+      <span class="card-arrow">Open letter →</span>
+    </button>
+
+    <button class="letter-card" data-letter="angry">
+      <span class="envelope-icon">🧸</span>
+      <h3>Open when you're upset with me</h3>
+      <p>For the moments when we need a little softness.</p>
+      <span class="card-arrow">Open letter →</span>
+    </button>
+
+    <button class="letter-card" data-letter="love">
+      <span class="envelope-icon">♡</span>
+      <h3>Open when you need to feel loved</h3>
+      <p>In case you ever need a reminder.</p>
+      <span class="card-arrow">Open letter →</span>
+    </button>
+
+  </div>
+
+  <!-- LETTER READING VIEW -->
+  <div class="letter-reading hidden" id="letter-reading">
+    <button class="letter-back-button" id="letter-back">
+      ← Back to letters
+    </button>
+
+    <article class="letter-paper">
+      <p class="small-label" id="letter-label">A LETTER FOR YOU</p>
+      <h2 id="letter-title">Dear sayang,</h2>
+
+      <div class="letter-body" id="letter-body"></div>
+
+      <p class="letter-ending">
+        With all my love,<br>
+        <span>Yours ♡</span>
+      </p>
+
+      <div class="letter-decoration">✿</div>
+    </article>
+  </div>
+</section>
+
+    <!-- THINGS I ADORE -->
+    <section class="page subpage" id="adore">
+      <button class="back-button">← Back</button>
+      <div class="page-heading">
+        <span class="page-emoji">🌷</span>
+        <p class="small-label">A COLLECTION OF LITTLE THINGS</p>
+        <h1>Things I Adore</h1>
+        <p>Because there are a million little things that make you, you.</p>
+      </div>
+      <div class="placeholder-area">
+        <span>♡</span>
+        <p>All the little things I adore about you.</p>
+        <small>This space is waiting to be filled.</small>
+      </div>
+    </section>
+
+    <!-- SOUNDTRACK -->
+    <section class="page subpage" id="soundtrack">
+      <button class="back-button">← Back</button>
+      <div class="page-heading">
+        <span class="page-emoji">🎶</span>
+        <p class="small-label">SOUNDTRACK OF US</p>
+        <h1>Our Soundtrack</h1>
+        <p>Some songs just feel a little more special because of you.</p>
+      </div>
+      <div class="placeholder-area">
+        <span>♫</span>
+        <p>Our songs will play here.</p>
+        <small>A playlist made for us.</small>
+      </div>
+    </section>
+
+    <!-- GARDEN -->
+    <section class="page subpage" id="garden">
+      <button class="back-button">← Back</button>
+      <div class="page-heading">
+        <span class="page-emoji">🪻</span>
+        <p class="small-label">A PLACE TO GROW</p>
+        <h1>Our Little Garden</h1>
+        <p>A tiny dreamy garden, blooming just for us.</p>
+      </div>
+      <div class="placeholder-area garden-placeholder">
+        <span>❀</span>
+        <p>Our garden is waiting to bloom.</p>
+        <small>Something lovely will grow here.</small>
+      </div>
+    </section>
+
+    <!-- SURPRISES -->
+    <section class="page subpage" id="surprises">
+      <button class="back-button">← Back</button>
+      <div class="page-heading">
+        <span class="page-emoji">✨</span>
+        <p class="small-label">A LITTLE BIT OF MAGIC</p>
+        <h1>Little Surprises</h1>
+        <p>Because life is sweeter with unexpected little joys.</p>
+      </div>
+      <div class="placeholder-area">
+        <span>✧</span>
+        <p>Surprises are hiding here.</p>
+        <small>You'll have to come back and see.</small>
+      </div>
+    </section>
+
+    <!-- PROMISE -->
+    <section class="page subpage" id="promise">
+      <button class="back-button">← Back</button>
+      <div class="page-heading">
+        <span class="page-emoji">♡</span>
+        <p class="small-label">A NOTE FROM MY HEART</p>
+        <h1>A Little Promise</h1>
+        <p>Some things are worth saying, and even more worth keeping.</p>
+      </div>
+      <div class="placeholder-area">
+        <span>♡</span>
+        <p>A little promise, just for you.</p>
+        <small>More words will find their way here.</small>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
