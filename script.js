@@ -222,7 +222,7 @@ letterBack.addEventListener("click", () => {
   {
     title: "Everywhere, Everything",
     artist: "Noah Kahan",
-    src: "music/Nama%20File%20Lagu%20Keempat.mp3"
+    src: "music/Everywhere,%20Everything.mp3"
   }
 ];
 
@@ -254,7 +254,7 @@ function loadTrack(index, shouldPlay = false) {
   const track = soundtrack[currentTrack];
 
   audio.pause();
-  audio.src = track.file;
+  audio.src = track.src;
   audio.load();
 
   musicTitle.textContent = track.title;
