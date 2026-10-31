@@ -955,3 +955,78 @@ body {
     font-size: 28px;
   }
 }
+
+
+/* A NOTE FROM MY HEART */
+
+.heart-letter {
+  max-width: 720px;
+  margin: 35px auto;
+  padding: clamp(30px, 7vw, 60px);
+  background: #fffaf2;
+  border: 1px solid #e9d9c9;
+  box-shadow: 0 12px 35px rgba(91, 66, 55, 0.09);
+  color: #66524b;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  line-height: 1.85;
+}
+
+.heart-letter p {
+  margin-bottom: 20px;
+}
+
+.letter-decoration {
+  text-align: center;
+  font-size: 1.7rem;
+  color: #c28f91;
+  margin-bottom: 25px;
+}
+
+.letter-greeting {
+  font-size: 1.45rem;
+  font-style: italic;
+  color: #8d6661;
+}
+
+.letter-last-line {
+  font-style: italic;
+  color: #8d6661;
+}
+
+.letter-signoff {
+  margin-top: 35px;
+  text-align: right;
+  color: #8d6661;
+}
+
+.letter-signoff p {
+  margin-bottom: 4px;
+  font-style: italic;
+}
+
+.letter-signoff span {
+  font-family: 'Parisienne', cursive;
+  font-size: 2rem;
+}
+
+.bottom-decoration {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.note-footer {
+  text-align: center;
+  margin: 30px 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: #a88982;
+}
+
+@media (max-width: 600px) {
+  .heart-letter {
+    padding: 30px 24px;
+    font-size: 1.1rem;
+    line-height: 1.75;
+  }
+}
