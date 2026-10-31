@@ -210,19 +210,19 @@ letterBack.addEventListener("click", () => {
     src: "music/Coming%20Up%20Roses.mp3"
   },
   {
-    title: "Turning Page",
-    artist: "Sleeping At Last",
-    src: "music/Turning%20Page.mp3"
-  },
-  {
     title: "Love is in the Air, Pt. 1",
     artist: "Rock Burwell",
-    src: "music/Love%20is%20in%20the%20Air,%20Pt. 1.mp3"
+    src: "music/Love%20is%20in%20the%20Air,%20Pt.%201.mp3"
   },
   {
     title: "Everywhere, Everything",
     artist: "Noah Kahan",
     src: "music/Everywhere,%20Everything.mp3"
+  },
+  {
+    title: "Turning Page",
+    artist: "Sleeping At Last",
+    src: "music/Turning%20Page.mp3"
   }
 ];
 
