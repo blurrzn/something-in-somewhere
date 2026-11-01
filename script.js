@@ -223,7 +223,7 @@ letterBack.addEventListener("click", () => {
     title: "Turning Page",
     artist: "Sleeping At Last",
     src: "music/Turning%20Page.mp3"
-  }
+  },
   {
     title: "Capital Letters",
     artist: "Hailee Steinfeld & BloodPop®",
