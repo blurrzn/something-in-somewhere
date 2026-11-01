@@ -224,6 +224,11 @@ letterBack.addEventListener("click", () => {
     artist: "Sleeping At Last",
     src: "music/Turning%20Page.mp3"
   }
+  {
+    title: "Capital Letters",
+    artist: "Hailee Steinfeld & BloodPop®",
+    src: "music/Capital%20Letters.mp3"
+  }
 ];
 
 const audio = document.getElementById("soundtrack-audio");
